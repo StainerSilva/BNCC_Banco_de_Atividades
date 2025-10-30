@@ -1,0 +1,5 @@
+{
+  "name": "BNCC - Banco de Atividades",
+  "description": "A collaborative platform for teachers, coordinators, students, and parents to manage educational activities aligned with Brazil's BNCC curriculum. Features role-based access, version control, an approval workflow, and AI-powered activity generation.",
+  "requestFramePermissions": []
+}
