@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext, useMemo } from 'react';
 import { User, Role, Notification } from './types';
 import { USERS, NOTIFICATIONS } from './constants';
-import { HomeIcon, BookOpenIcon, CheckBadgeIcon, UserGroupIcon, ChatBubbleLeftRightIcon, VideoCameraIcon, UserCircleIcon } from './components/icons';
+import { HomeIcon, BookOpenIcon, CheckBadgeIcon, UserGroupIcon, ChatBubbleLeftRightIcon, VideoCameraIcon, UserCircleIcon, GoogleClassroomIcon } from './components/icons';
 import { GoogleMeetIcon, YouTubeIcon } from './components/icons';
 import ActivityManager from './components/activities/ActivityManager';
 import Header from './components/common/Header';
@@ -11,6 +11,7 @@ import Chat from './components/chat/Chat';
 import ProfileManager from './components/common/ProfileManager';
 import GoogleMeetManager from './components/integrations/GoogleMeetManager';
 import YouTubeLiveManager from './components/integrations/YouTubeLiveManager';
+import GoogleClassroomManager from './components/integrations/GoogleClassroomManager';
 
 
 interface AuthContextType {
@@ -116,7 +117,7 @@ const MainLayout: React.FC = () => {
       { id: 'chat', label: 'Chat', icon: ChatBubbleLeftRightIcon },
       { id: 'meet', label: 'Criar Sala Meet', icon: GoogleMeetIcon },
       { id: 'youtube', label: 'Aula ao Vivo (YouTube)', icon: YouTubeIcon },
-      { id: 'classroom', label: 'Google Sala de Aula', icon: BookOpenIcon },
+      { id: 'classroom', label: 'Google Sala de Aula', icon: GoogleClassroomIcon },
   ];
 
   const currentNavItems = user ? [...navItems[user.role], ...commonNavItems] : [];
@@ -129,13 +130,7 @@ const MainLayout: React.FC = () => {
         case 'profile': return <ProfileManager />;
         case 'meet': return <GoogleMeetManager />;
         case 'youtube': return <YouTubeLiveManager />;
-        case 'classroom':
-            return (
-                <div className="p-8 text-center text-gray-500">
-                    <h2 className="text-2xl font-bold mb-4">Funcionalidade em Construção</h2>
-                    <p>Esta área está sendo desenvolvida e estará disponível em breve!</p>
-                </div>
-            );
+        case 'classroom': return <GoogleClassroomManager />;
         default:
             return (
                 <div className="p-4 sm:p-6 lg:p-8">

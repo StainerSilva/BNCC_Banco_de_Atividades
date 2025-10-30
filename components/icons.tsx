@@ -160,3 +160,11 @@ export const YouTubeIcon: React.FC<IconProps> = ({ className = 'w-6 h-6' }) => (
          <path fill="#FFFFFF" d="M10,15.5l6-3.5l-6-3.5V15.5z"></path>
     </svg>
 );
+
+export const GoogleClassroomIcon: React.FC<IconProps> = ({ className = 'w-6 h-6' }) => (
+    <svg className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#34a853"/>
+        <path d="M12 12l6-3-6-3-6 3 6 3zm0 2l-6 3v-2.5l6-3 6 3V17l-6-3z" fill="#ffffff"/>
+        <path d="M12 4.41L6 7.41V12h12V7.41L12 4.41zM16.5 13.5l-4.5 2.5-4.5-2.5V9.91l4.5 2.5 4.5-2.5v3.59z" fill="#1e8e3e"/>
+    </svg>
+);

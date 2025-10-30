@@ -110,3 +110,22 @@ export interface Notification {
   timestamp: string;
   read: boolean;
 }
+
+// Google Classroom types
+export interface GoogleClassroomCourse {
+  id: string;
+  name: string;
+  section: string;
+  alternateLink: string;
+}
+
+export interface GoogleClassroomCourseWork {
+  id: string;
+  title: string;
+  alternateLink: string;
+  dueDate?: {
+    year: number;
+    month: number;
+    day: number;
+  };
+}
